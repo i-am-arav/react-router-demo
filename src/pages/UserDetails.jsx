@@ -1,10 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 
 const UserDetails = () => {
 const {userId} = useParams();
+const [searchParams, setSearchParams] = useSearchParams({name: ''});
   return (
-    <div style={{margin:'20px'}}>I am user {userId}</div>
+    <div style={{margin:'20px'}}>I am user {userId} {searchParams.get('name') && <span>My Username is {searchParams.get('name')}</span>}</div>
   )
 }
 
