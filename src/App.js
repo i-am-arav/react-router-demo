@@ -7,6 +7,7 @@ import Users from './pages/Users';
 import UserDetails from './pages/UserDetails';
 import Newuser from './pages/Newuser';
 import UserNav from './pages/UserNav';
+import UserRoutes from './UserRoutes';
 
 function App() {
   return (
@@ -20,11 +21,9 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/careers' element={<Careers />} />
-      <Route path='/users' element={<UserNav />}>
-        <Route index element={<Users />} />
-        <Route path=":userId" element={<UserDetails />} />
-        <Route path='new' element={<Newuser />} />
-      </Route>
+      <Route path='/users/*' element={<UserRoutes />} />
+
+
     </Routes>
     </div>
   );

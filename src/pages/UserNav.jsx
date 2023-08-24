@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const UserNav = () => {
-const userName = 'Miller'
   return (
     <>
         <Link style={{margin:'0 10px'}} to='/users/new'>New User</Link>
         <Link style={{margin:'0 10px'}} to='/users'>Users</Link>
-        <Outlet context={userName} />
+        <Link style={{margin:'0 10px'}} to='/users/1'>Users 1</Link>
+        <Link style={{margin:'0 10px'}} to='/users/2'>Users 2</Link>
     
     </>
   )
