@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 const Users = () => {
-  return (
-    <div style={{margin:'20px'}}>Users List Page</div>
-  )
-}
+  const data = useOutletContext();
+  return <div style={{ margin: "20px" }}>Users List Page {data}</div>;
+};
 
-export default Users
+export default Users;
