@@ -6,8 +6,7 @@ import Careers from './pages/Careers';
 import Users from './pages/Users';
 import UserDetails from './pages/UserDetails';
 import Newuser from './pages/Newuser';
-import UserNav from './pages/UserNav';
-import UserRoutes from './UserRoutes';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -21,9 +20,10 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/careers' element={<Careers />} />
-      <Route path='/users/*' element={<UserRoutes />} />
-
-
+      <Route path='/users'  element={<Users />} />
+      <Route path='/users/:userId' element={<UserDetails />} />
+      <Route path='/users/new' element={<Newuser />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
     </div>
   );
