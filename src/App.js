@@ -3,6 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Careers from './pages/Careers';
+import Users from './pages/Users';
+import UserDetails from './pages/UserDetails';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/careers' element={<Careers />} />
+      <Route path='/users' element={<Users />} />
+      <Route path='/users/:userId' element={<UserDetails />} />
     </Routes>
     </div>
   );
