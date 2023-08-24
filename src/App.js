@@ -19,9 +19,11 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/careers' element={<Careers />} />
-      <Route path='/users' element={<Users />} />
-      <Route path='/users/:userId/' element={<UserDetails />} />
-      <Route path='/users/new' element={<Newuser />} />
+      <Route path='/users'>
+        <Route index element={<Users />} />
+        <Route path=":userId" element={<UserDetails />} />
+        <Route path='new' element={<Newuser />} />
+      </Route>
     </Routes>
     </div>
   );
