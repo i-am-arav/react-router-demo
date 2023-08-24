@@ -6,11 +6,12 @@ import Careers from './pages/Careers';
 import Users from './pages/Users';
 import UserDetails from './pages/UserDetails';
 import Newuser from './pages/Newuser';
+import UserNav from './pages/UserNav';
 
 function App() {
   return (
     <div style={{margin: '40px'}}>
-      <nav>
+      <nav style={{marginBottom: '20px'}}>
         <Link style={{margin:'0 10px'}} to='/'>Home</Link>
         <Link style={{margin:'0 10px'}} to='/about'>About</Link>
         <Link style={{margin:'0 10px'}} to='/careers'>Careers</Link>
@@ -19,7 +20,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/careers' element={<Careers />} />
-      <Route path='/users'>
+      <Route path='/users' element={<UserNav />}>
         <Route index element={<Users />} />
         <Route path=":userId" element={<UserDetails />} />
         <Route path='new' element={<Newuser />} />
