@@ -13,7 +13,7 @@ function App() {
   return (
     <div style={{margin: '40px'}}>
       <nav style={{marginBottom: '20px'}}>
-        <NavLink style={({isActive}) => isActive ? {color:'red'}: {color:'cyan'}}  to='/' >Home</NavLink>
+        <NavLink  to='/' >{({isActive}) => isActive ? 'Active Home' : 'Home'}</NavLink>
         <Link style={{margin:'0 10px'}} to='/about' state={name}>About</Link>
         <Link style={{margin:'0 10px'}} to='/careers'>Careers</Link>
       </nav>
