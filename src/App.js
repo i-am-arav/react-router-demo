@@ -9,11 +9,12 @@ import Newuser from './pages/Newuser';
 import NotFound from './pages/NotFound';
 
 function App() {
+  const name = 'miller';
   return (
     <div style={{margin: '40px'}}>
       <nav style={{marginBottom: '20px'}}>
         <Link style={{margin:'0 10px'}} to='/'>Home</Link>
-        <Link style={{margin:'0 10px'}} to='/about'>About</Link>
+        <Link style={{margin:'0 10px'}} to='/about' state={name}>About</Link>
         <Link style={{margin:'0 10px'}} to='/careers'>Careers</Link>
       </nav>
     <Routes>
