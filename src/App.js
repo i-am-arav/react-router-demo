@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Careers from './pages/Careers';
@@ -13,7 +13,7 @@ function App() {
   return (
     <div style={{margin: '40px'}}>
       <nav style={{marginBottom: '20px'}}>
-        <Link style={{margin:'0 10px'}} to='/'>Home</Link>
+        <NavLink style={({isActive}) => isActive ? {color:'red'}: {color:'cyan'}}  to='/' >Home</NavLink>
         <Link style={{margin:'0 10px'}} to='/about' state={name}>About</Link>
         <Link style={{margin:'0 10px'}} to='/careers'>Careers</Link>
       </nav>
